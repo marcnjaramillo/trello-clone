@@ -1,24 +1,24 @@
 import React from 'react';
-import './App.css';
+import { AddNewItem } from './AddNewItem';
+import { AppContainer } from './styles';
+import { Card } from './Card';
+import { Column } from './Column';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <AppContainer>
+      <Column text='To Do' >
+        <Card text='Generate app scaffold' />
+      </Column>
+      <Column text='In Progress' >
+        <Card text='Learn Typescript' />
+      </Column>
+      <Column text='Done' >
+        <Card text='Begin to use static typing' />
+      </Column>
+      <AddNewItem toggleButtonText='+ Add another list' onAdd={console.log} />
+    </AppContainer>
+  )
 }
 
 export default App;
