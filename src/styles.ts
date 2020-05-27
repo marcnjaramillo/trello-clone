@@ -36,7 +36,7 @@ export const ColumnTitle = styled.div`
   padding: 6px 16px 12px;
 `
 
-export const CardContainer = styled.div`
+export const CardContainer = styled(DragPreviewContainer)`
   background-color: #fff;
   border-radius: 3px;
   box-shadow: #091e4240 0px 1px 0px 0px;
